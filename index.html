@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Interactive ABCs of CSS Technology</title>
+</head>
+<body>
+
+    <div class="centered-container">
+        <h1>Welcome to the Interactive ABCs of CSS Technology learning Website</h1>
+    </div>
+    
+    <div class="centered-container">
+        <h1>Click on the buttons below to reveal and learn the CSS technology features of the corresponding letters</h1>
+    </div>
+    <div class="main-container">
+
+    <!-- Option A -->
+    <div class="column">
+        <div class="card" id="card-a">
+            <div class="image-container">
+                <img src="images/css-letter-a.png" alt="Aspect-Ratio">
+            </div>
+            <div class="button-container">
+                <button onclick="toggleCard('a')">Hide Result</button>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="reveal-button" onclick="toggleCard('a')">A</button>
+        </div>
+    </div>
+    
+    <!-- Option B -->
+    <div class="column">
+        <div class="card" id="card-b">
+            <div class="image-container">
+                <img src="images/css-letter-b.png" alt="Border">
+            </div>
+            <div class="button-container">
+                <button onclick="toggleCard('b')">Hide Result</button>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="reveal-button" onclick="toggleCard('b')">B</button>
+        </div>
+    </div>
+    
+    <!-- Option C -->
+    <div class="column">
+        <div class="card" id="card-c">
+            <div class="image-container">
+                <img src="images/css-letter-c.png" alt="Colors">
+            </div>
+            <div class="button-container">
+                <button onclick="toggleCard('c')">Hide Result</button>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="reveal-button" onclick="toggleCard('c')">C</button>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+<script>
+    function toggleCard(letter) {
+        const card = document.getElementById('card-' + letter);
+        const img = card.querySelector('img');
+        const hideButton = card.querySelector('button');
+    
+        if (img.style.opacity === "" || img.style.opacity === "0") {
+            img.style.opacity = "1";
+            hideButton.style.opacity = "1";
+        } else {
+            img.style.opacity = "0";
+            hideButton.style.opacity = "0";
+        }
+    }
+</script>    
+</html>
